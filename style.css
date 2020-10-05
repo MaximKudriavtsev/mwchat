@@ -25,3 +25,20 @@ html, body{
     width: 100%;
     height: 100%;
 }
+
+.typezone   {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 10%;
+    border: 1px solid black
+}
+
+.mess_area{
+    width: 90%;
+}
+
+.but_send{
+    width: 10%;
+}
+
