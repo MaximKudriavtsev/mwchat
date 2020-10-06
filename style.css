@@ -32,8 +32,9 @@ html, body{
 }
 
 .mymessages{
-    text-align: right;
-    padding: 2%;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 1%;
     margin: 3%;
     background: white;
 }
