@@ -11,11 +11,13 @@
         <div class="chatwindow">
             <div class="chat">
             </div>
-            <div class="typezone">
-                <textarea class="mess_area"></textarea>
-                <button class="but_send">Send</button>
+                <form class="typezone" id="typed_mess" onsubmit="alert(send_mess.value)">
+                    <textarea name="send_mess" class="mess_area" form="typed_mess" placeholder="Type your message"></textarea>
+                    <input type="submit" class="but_sent" value="Sent">
+                    <!-- <button class="but_send">Send</button> -->
+                    <!-- <input type="text" class="mess_area" placeholder="Type your message" name="send_mess"> -->
            </div>
         </div>
     </div>
 </body>
-</html>
+</html> 
