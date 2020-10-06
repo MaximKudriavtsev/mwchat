@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="maindiv">
         <div class="chatwindow">
-            <div class="chat">
-            </div>
-            <div class="typezone">
-                <textarea class="mess_area"></textarea>
-                <button class="but_send">Send</button>
-           </div>
+            <div class="chat"></div>
+                    <!-- <button class="but_send">Send</button> -->
+                    <!-- <input type="text" class="mess_area" placeholder="Type your message" name="send_mess"> -->
         </div>
+        <textarea name="send_mess" class="mess_area" placeholder="Type your message"></textarea>
+        <button class="but_sent" onclick="send()">Send</button>
     </div>
 </body>
 </html>
