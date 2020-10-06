@@ -7,7 +7,6 @@ function send()
     let messageElement = document.createElement('p');
     messageElement.classList.add('mymessages');
     messageElement.innerHTML = message.value;
-    messageElement.
     chat.appendChild(messageElement);
     message.value = '';
 }
