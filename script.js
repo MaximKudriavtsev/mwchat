@@ -1,25 +1,29 @@
+const DATA_KEY = 'DATA_KEY';
+const chatData = localStorage.getItem(DATA_KEY) && [];
+const inputElement = document.querySelector('.mess_area');
 
-let chat = document.querySelector('.chat');
-let oldMessageElement;
-let key = '0';
-
-while (localStorage.getItem(key) != null)
-{
-    oldMessageElement = document.createElement('p');
-    oldMessageElement.classList.add('mymessages');
-    oldMessageElement.innerHTML = localStorage.getItem(key);
-    chat.appendChild(oldMessageElement);
-    key = String(Number(key) + 1);
+function renderChatMessages(chatElement, messages) {
+    messages.forEach(fuction(message) {
+        const messageElement = document.createElement('p');
+        messageElement.classList.add('mymessages');
+        messageElement.innerHTML = message;
+        
+        chatElement.appendChild(messageElement);
+    });
 }
 
-function send()
-{
-    let message = document.querySelector('.mess_area');
-    localStorage.setItem(key, message.value);
-    let messageElement = document.createElement('p');
-    messageElement.classList.add('mymessages');
-    messageElement.innerHTML = message.value;
-    chat.appendChild(messageElement);
-    key = String(Number(key) + 1);
+fuction addMessage(text) {
+    chatData.push(text);
+    localStorage.setItem(DATA_KEY, chatData);
+    renderChatMessages([text]);
+}
+
+fuction buttonClickHandler() {
+    const message = document.querySelector('.mess_area');
+    addMessage(message.value);
     message.value = '';
 }
+
+inputElement.addEventListener('click', inputChangeHandler);
+
+renderChatMessages(chatData);
